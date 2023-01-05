@@ -1,5 +1,7 @@
 body {
     font-family: 'Black Ops One', cursive;
+    background: black;
+    color: white;
 }
 
 .navbar {
@@ -32,11 +34,6 @@ body {
 
 .foot {
     background-color: #23242a;
-}
-
-.body {
-    background: black;
-    color: white;
 }
 
 .navbar-brand {
