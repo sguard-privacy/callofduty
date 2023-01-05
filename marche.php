@@ -1,3 +1,10 @@
+<?php
+
+require_once 'inc/log_bdd.php';
+require_once 'inc/fonction.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -14,26 +21,7 @@
         <link href="assets/css/marche.css" rel="stylesheet" />
     </head>
     <body>
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#!">Call Of Duty Black Ops 3</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Retour à l'acceuil</a></li>
-                    </ul>
-                    
-                        <a class="btn btn-outline-dark" style="margin: 10px;" type="button" href="inscription.php">
-                            Inscription
-                        </a>
-
-                        <a class="btn btn-outline-dark" type="button" href="connexion.php">
-                            Connexion
-                        </a>
-                </div>
-            </div>
-        </nav>
+<?php require_once 'inc/navbar.php'; ?>
         <!-- Header-->
         <header class="bg-dark py-5">
             <div class="container px-4 px-lg-5 my-5">
@@ -248,7 +236,7 @@
         </section>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Call of Duty : Black Ops 3</p></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

@@ -55,7 +55,7 @@ if ( !empty($_POST) ) {
                 
              
     
-              $mdp = password_hash($_POST['mdp'], PASSWORD_DEFAULT); //bcrypt
+              $mdp = password_hash($_POST['mdp'], PASSWORD_BCRYPT); //bcrypt
     
               $succes = executeRequete( " INSERT INTO membre (nom, prenom, pseudo, mail, mobile, mdp) VALUES (:nom, :prenom, :pseudo, :mail, :mobile, :mdp) ",
               array(
@@ -88,6 +88,7 @@ if ( !empty($_POST) ) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body>
+<?php require_once 'inc/navbar.php' ?>
 <section class="vh-100" style="background-color: #eee;">
   <div class="container h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -164,10 +165,11 @@ if ( !empty($_POST) ) {
 
                 </form>
 
-                <?php echo $contenu; debug($_POST); ?>
+                <div class="alert alert-success">Vous possedez déjà un compte ? 
+                <br><a href="connexion.php">Cliquez ici pour vous connectez !</a></div> 
+                </div>
 
-              </div>
-              <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+                <?php echo $contenu; debug($_POST); ?>
 
               </div>
             </div>
@@ -177,6 +179,7 @@ if ( !empty($_POST) ) {
     </div>
   </div>
 </section>
+<?php require_once 'inc/footer.php' ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
