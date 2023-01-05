@@ -59,6 +59,9 @@ require_once 'inc/fonction.php';
 							<a class="nav-link" href="#gameplay">Gameplay</a>
 						</li>
 						<li class="nav-item">
+							<a class="nav-link" href="marche.php">Marché Noir</a>
+						</li>
+						<li class="nav-item">
 							<button
 								type="button"
 								class="btn btn-primary"
@@ -371,39 +374,11 @@ require_once 'inc/fonction.php';
 		</nav>
 	</body>
 	<footer class="foot">
-		<div class="d-flex justify-content-center py-5">
-			<button
-				aria-label="linkedin"
-				type="button"
-				class="btn btn-primary btn-lg btn-floating mx-2"
-			>
-				<a
-					aria-label="linkedin"
-					class="fab fa-linkedin"
-					href="https://www.linkedin.com/in/lucas-poignard-716747252/"
-					target="_blank"
-				></a>
-			</button>
-			<button
-				aria-label="github"
-				type="button"
-				class="btn btn-primary btn-lg btn-floating mx-2"
-			>
-				<a
-					aria-label="github"
-					class="fab fa-github"
-					href="https://github.com/sentiitoo/HTML"
-					target="_blank"
-				></a>
-			</button>
-		</div>
 		<!-- Copyright -->
 
 		<div class="text-center text-white-footer p-3">
-			© 2022 Copyright:
-			<a class="text-white-footer" href="https://github.com/sentiitoo/HTML" target="_blank"
-				>Lucas & Idriss</a
-			>
+			<p>© 2022 Copyright:
+			Call of Duty Black Ops 3</p>
 		</div>
 		<!-- Copyright -->
 	</footer>

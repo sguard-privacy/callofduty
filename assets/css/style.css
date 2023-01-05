@@ -30,10 +30,6 @@ body {
     background-color: #54456b;
 }
 
-.vidt {
-    font-family: Orbitron;
-}
-
 .foot {
     background-color: #23242a;
 }
@@ -83,7 +79,6 @@ body {
 .ratio {
     position: relative;
     width: 50%;
-    font-family: fantasy;
 }
 
 .image_responsive {
@@ -100,7 +95,6 @@ body {
     position: relative;
     top: 40%;
     text-align: center;
-    font-family: 'Koulen', cursive;
 }
 
 .row-carouselcallof {
@@ -110,12 +104,8 @@ body {
 
 .carousel-caption {
     background-color: black;
-    font-family: 'Goldman', cursive;
 }
 
-.text-white3 {
-    font-family: fantasy;
-}
 
 .multi-image {
     width: 300px;
@@ -129,7 +119,6 @@ body {
     text-align: center;
     width: 300px;
     color: #fd7e14;
-    font-family: fantasy;
 }
 
 .fixed-bottom {
@@ -164,7 +153,6 @@ body {
 
 .card-text {
     color: white;
-    font-family: fantasy;
     border-color: orangered;
 }
 
