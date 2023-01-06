@@ -47,7 +47,7 @@ require_once 'inc/fonction.php';
                 echo      "<div class=\"card-body p-4\">";
                 echo          "<div class=\"text-center\">";
                 echo              "<h5 class=\"fw-bolder\">$info[Nom]</h5>";
-                echo            "<p>$info[prix]</p>";
+                echo            "<p>$info[prix] €</p>";
                 echo          "</div>";
                 echo      "</div>";
                 echo        "<div class=\"card-footer p-4 pt-0 border-top-0 bg-transparent\">";
