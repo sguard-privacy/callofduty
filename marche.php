@@ -51,7 +51,7 @@ require_once 'inc/fonction.php';
                 echo          "</div>";
                 echo      "</div>";
                 echo        "<div class=\"card-footer p-4 pt-0 border-top-0 bg-transparent\">";
-                echo           "<div class=\"text-center\"><a class=\btn btn-outline-dark mt-auto\" href=\"#\">Achetez</a></div>";
+                echo           "<div class=\"text-center\"><a class=\btn btn-outline-dark mt-auto\" href=\"arme.php?id_arme=$info[id_arme]\">Achetez</a></div>";
                 echo       "</div>";
                 echo    "</div>";
                 echo "</div>";

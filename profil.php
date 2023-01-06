@@ -16,7 +16,7 @@ if (!estConnecte()) {
 // 6 SUPPRESSION D'UN MEMBRE
 // debug($_GET);
 if (isset($_GET['action']) && $_GET['action'] == 'supprimer' && isset($_GET['id_membre'])) {
-  $resultat = $pdoLOG->prepare( " DELETE FROM membre WHERE id_membre = :id_membre " );
+  $resultat = $pdoCOD->prepare( " DELETE FROM membre WHERE id_membre = :id_membre " );
 
   $resultat->execute(array(
     ':id_membre' => $_GET['id_membre']
@@ -26,6 +26,9 @@ if (isset($_GET['action']) && $_GET['action'] == 'supprimer' && isset($_GET['id_
     $contenu .= '<div class="alert alert-danger"> Erreur de suppression</div>';
   } else {
     $contenu .= '<div class="alert alert-success"> Votre compte a été supprimer</div>';
+    header('location:index.php');
+    session_destroy();
+    exit();
   }
 }
 
@@ -68,6 +71,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'supprimer' && isset($_GET['id_
             </div>
             <div class="d-flex justify-content-center mb-2">
             <a href="maj_profil.php?id_membre=<?php echo $_SESSION['membre']['id_membre'] ?>" class="btn btn-warning">Modifier vos informations</a>
+            <a  class="btn btn-warning" href="?action=supprimer&id_membre=<?php echo $id_membre; ?>" onclick="return(confirm('Nous sommes désolés de vous voir partir, confirmez la suppression de votre compte.'))">Supprimez votre compte</a>
             </div>
           </div>
         </div>

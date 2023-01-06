@@ -29,6 +29,7 @@ if ( !empty($_POST) ) {
       if ( !isset($_POST['pseudo']) || strlen($_POST['pseudo']) < 4 || strlen($_POST['pseudo']) > 20) {
           $contenu .='<div class="alert alert-danger">Votre pseudo doit faire entre 4 et 20 caractères</div>';
       }
+      
       if(isset($_POST['mdp']) && isset($_POST['confmdp'])) {
         if(empty($_POST['mdp'])) {
             $contenu='<div class="alert alert-danger">Le premier champ de mot de passe il est vide</div>';
@@ -39,8 +40,8 @@ if ( !empty($_POST) ) {
         }
     }
     
-      if ( !isset($_POST['mdp']) || strlen($_POST['mdp']) < 4 || strlen($_POST['mdp']) > 20) {
-          $contenu .='<div class="alert alert-danger">Votre mot de passe doit faire entre 4 et 20 caractères</div>';
+      if ( !isset($_POST['mdp']) || strlen($_POST['mdp']) < 4 || strlen($_POST['mdp']) > 32) {
+          $contenu .='<div class="alert alert-danger">Votre mot de passe doit faire entre 4 et 32 caractères</div>';
       }
     
       if (empty($contenu)) {// si la variable est vide c'est qu'il n'y a aucune erreur dans $_POST
@@ -52,9 +53,6 @@ if ( !empty($_POST) ) {
           } else {
             
      
-                
-             
-    
               $mdp = password_hash($_POST['mdp'], PASSWORD_BCRYPT); //bcrypt
     
               $succes = executeRequete( " INSERT INTO membre (nom, prenom, pseudo, mail, mobile, mdp) VALUES (:nom, :prenom, :pseudo, :mail, :mobile, :mdp) ",
